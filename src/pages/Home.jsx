@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import service from "../appwrite/conf";
 import { Container, PostCard } from "../components/imports";
-import { useSelector } from "react-redux";
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
-  // const authStatus = useSelector((state) => state.auth.status);
 
   useEffect(() => {
     service.getPosts([]).then((post) => {
       if (post) {
         setPosts(post.documents);
-        console.log("Added");
       }
     });
   }, []);
