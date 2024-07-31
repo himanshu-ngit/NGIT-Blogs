@@ -32,7 +32,7 @@ const PostCard = ({ $id, title, featuredImage }) => {
             <p>Loading image...</p>
           )}
         </div>
-        <h2 className="text-xl font-bold mt-4">{title}</h2>
+        <h2 className="text-l font-bold mt-4 truncate">{title}</h2>
       </div>
     </Link>
   );
